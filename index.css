@@ -1,0 +1,450 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+.login-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 35px 0;
+}
+
+/* label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+} */
+
+/* input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 12px;
+} */
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer; 
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+    opacity: 0.5;
+}
+
+#remember-me{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.upper-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    width: 90px;
+}
+.rucustomer{
+    margin-right: 10px;
+    font-size: 8px;
+}
+.rightside{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* From Uiverse.io by tranquoclong */ 
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    /* margin: 1em 0 1em 0; */
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+  }
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #ffffff;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(150, 150, 200);
+  }
+
+  #specialbutton{
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50 ;
+    border-radius: 50px;
+    cursor: pointer; 
+    font-weight: bold;
+  }
+
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+}
+
+#animated-image {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    transform: scale(0);
+    position: absolute; /* Ensure positioning is absolute */
+    left: calc(50% - 75px); /* Initial position is centered */
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes for the popping effect */
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4.5) translateX(90px);
+        border-radius: 5px;
+    }
+}
+
+#animated-image2 {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    transform: scale(0);
+    position: absolute; /* Ensure positioning is absolute */
+    left: calc(50% - 75px); /* Initial position is centered */
+    animation-fill-mode: forwards;
+    background-blend-mode: screen;
+}
+
+/* Keyframes for the popping effect */
+@keyframes popUp2 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(0.75) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5) translate(-1220px,-550px) rotate(360deg);
+        border-radius: 5px;
+        width: 200px;
+    }
+}
+
+#rucustomer {
+    width: max-content;
+    opacity: 0;
+    position: absolute; /* Ensure positioning is absolute */
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes for the popping effect */
+@keyframes popUp3 {
+    0% {
+        transform:translate(0px) ;
+        opacity: 0;
+    }
+    50% {
+        transform:translate(-80px) ;
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-140px);
+        opacity: 1;
+    }
+}
+
+/* CSS for the login box */
+.loginbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    position: absolute;
+    top: 50%;
+    left: -300px;
+    transform: translateY(-50%);
+    width: 650px;
+    height: 664px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: left 1s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Class to show the login box */
+.show-login-box {
+    left: 100px; /* Move to visible position */
+    opacity: 1; /* Fade in */
+}
+
+
+
+@media (max-width:700px) {
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 20vh;
+    }
+    
+    #animated-image {
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        position: absolute; /* Ensure positioning is absolute */
+        left: calc(50% - 100px); 
+        animation-fill-mode: forwards;
+    }
+    
+        
+    /* Keyframes for the popping effect */
+    @keyframes popUp {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1.5) translateY(-70px);
+            width: 100vw;
+            height: 100vh;
+            opacity: 1;
+            border-radius: 5px;
+        }
+    }
+
+    #animated-image2 {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+        transform: scale(0);
+        position: absolute; /* Ensure positioning is absolute */
+        left: calc(50% - 75px); /* Initial position is centered */
+        animation-fill-mode: forwards;
+        background-blend-mode: screen;
+    }
+
+    /* Keyframes for the popping effect */
+    @keyframes popUp2 {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        60% {
+            transform: scale(0.25) rotate(180deg);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(0.15) translate(-590px, -1200px) rotate(360deg);
+            border-radius: 80px;
+            width: 120px;
+        }
+    }
+
+    #rucustomer {
+        width: max-content;
+        opacity: 0;
+        position: absolute; /* Ensure positioning is absolute */
+        animation-fill-mode: forwards;
+        color: white;
+    }
+
+    .inputGroup label {
+        font-size: 82%;
+        position: absolute;
+        left: 0;
+        padding: 0.2em;
+        margin-left: 0.5em;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        color: rgb(255 255 255);
+    }
+
+    .inputGroup input {
+        font-size: 100%;
+        padding: 0.2em;
+        outline: none;
+        border: 2px solid rgb(200, 200, 200);
+        background-color: transparent;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    /* Keyframes for the popping effect */
+    @keyframes popUp3 {
+        0% {
+            transform:translate(0px) ;
+            opacity: 0;
+        }
+        50% {
+            transform:translate(-80px) ;
+            opacity: 0;
+        }
+        100% {
+            transform: translate(-75px);
+            opacity: 1;
+        }
+    }
+
+    .loginbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        position: absolute;
+        top: 50%;
+        left: -3px;
+        transform: translateY(-50%);
+        width: 85vw;
+        height: 62vh;
+        padding: 20px;
+        background-color:#ffffff42;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: left 1s ease, opacity 0.5s ease;
+    }
+
+    .login-container{
+        width: 74vw;
+        margin: 0 auto;
+        padding: 0px;
+        border: 1px solid #ffffff00;
+        border-radius: 5px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 16px 0;
+    }
+
+    .upper-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 5vh;
+    }
+    
+    .login-container h1{
+        color:#fff;
+        font-size: 20px;
+    }
+
+    .login-container p {
+        margin-bottom: 10px;
+        font-size: 12px;
+        text-align: center;
+        color: white;
+    }
+    /* Class to show the login box */
+    .show-login-box {
+        left: 25px; /* Move to visible position */
+        opacity: 1; /* Fade in */
+    }
+
+    #specialbutton {
+        padding: 5px 5px;
+        background-color: #ffffff;
+        color: #4CAF50;
+        border: 1px solid #4CAF50;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 8px;
+        font-weight: bold;
+    }
+    footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.8em;
+        opacity: 0.5;
+        color: white;
+    }
+}
+
+
